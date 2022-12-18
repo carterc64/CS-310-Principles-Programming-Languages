@@ -1,0 +1,41 @@
+Carter Copen
+This follows academic integrity
+
+
+same :: [Int]-> [Int] -> Bool
+same lizt1 lizt2 = 
+    if null lizt1 then 
+        (if null lizt2 then 
+            True 
+        else 
+            False) 
+    else if null lizt2 then
+        False
+    else 
+        (if head lizt1 == head lizt2 then
+           same (tail lizt1) (tail lizt2)
+        else 
+            False)
+        
+       
+
+
+main = do 
+    let lizt1 = [1,2,3,5,6,7]
+    let lizt2 = [1,2,3,5,6,7]
+    print (same lizt1 lizt2)
+    let lizt1 = [1,2,3,5,6]
+    let lizt2 = [1,2,3,5,6,7]
+    print (same lizt1 lizt2)
+    let lizt1 = [1,2,3,5,6,7]
+    let lizt2 = [1,2,3,5,6]
+    print (same lizt1 lizt2)
+    let lizt1 = []
+    let lizt2 = [1,2,3,5,6,7]
+    print (same lizt1 lizt2)
+    let lizt1 = [1,2,3,5,6,7]
+    let lizt2 = []
+    print (same lizt1 lizt2)
+    let lizt1 = []
+    let lizt2 = []
+    print (same lizt1 lizt2)
